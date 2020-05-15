@@ -1,3 +1,3 @@
-import { example } from './example.js';
-
-example();
+import { pantalla1 } from './compenentes/pantalla1.js';
+import { registrar } from './compenentes/registro.js';
+pantalla1();
