@@ -10,5 +10,5 @@ El objetivo de este proyecto es construir una red social para que mujeres desarr
 
 ## Prototipo
 
-<img src='./img/prototipo1.png'>
-<img src='./img/prototipo2.png'>
+<img src="/src/img/prototipo1.png">
+<img src="/src/img/prototipo2.png">
