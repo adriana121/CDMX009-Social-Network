@@ -63,5 +63,4 @@ function verifyAccount(){
       // An error happened.
     });
     }
-
 }

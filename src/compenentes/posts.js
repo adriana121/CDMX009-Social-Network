@@ -22,7 +22,7 @@ export const publicaciones = (user) => {
        </div>
    </div>
    <div id='CompartirPhoto'>
-     <img class="inputImg" id='file' src="/img/camara.png">
+     <img class="inputImg" id='file' src="./img/camara.png">
      <input type='button' value='Compartir' class='compartir' id="Compartir">
      <input id="sendComment" type='button' value='Guardar' class='guardar'>
    </div>
@@ -43,7 +43,7 @@ let addBtn = document.querySelector('.compartir');
 let db = firebase.firestore();
 //funcion para enviar posts a base de datos
 addBtn.addEventListener('click', enviar);
-function enviar(){
+ function enviar(){
     db.collection("posts").add({
         name : user.displayName,
         texto : text.value,
@@ -74,7 +74,7 @@ db.collection("posts").onSnapshot((querySnapshot)=> {
         ${imgurl ? imageTemplete : div}
         <button id="delete" value="${doc.id}" class="delete">Eliminar</button>
         <button  id="edit" name="${doc.data().texto}" data-id="${doc.id}" class="edit">Editar</button>
-        <button class="like" name="${doc.data().likes}" data-id="${doc.id}"> <p class="like" >${doc.data().likes}</p> Me gusta</button> 
+        <button class="like" name="${doc.data().likes}" data-id="${doc.id}"><p class="like" >${doc.data().likes}</p>Me gusta</button> 
         `
     let nodo = document.createElement('div');
     nodo.classList.add('card')
@@ -208,6 +208,7 @@ function pos(){
 
      //}
      //upLoadPhoto();
+   
 }
 
 

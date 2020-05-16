@@ -1,3 +1,9 @@
 import { pantalla1 } from './compenentes/pantalla1.js';
-import { registrar } from './compenentes/registro.js';
-pantalla1();
+function router(route){
+    switch(route){
+        default:
+            pantalla1();
+            break;
+    }
+}
+router();

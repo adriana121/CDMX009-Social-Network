@@ -1,11 +1,9 @@
 import { registros } from './pantalla2.js'
 import { welcome } from './pantalla3.js'
-
 let root = document.querySelector('#root');
  export const pantalla1 = () => {
 let p = `
-
-     <img class='image' src="/img/portada.jpg">
+     <img class='image' src="./img/portada.jpg">
      <h1> Bienvenida a nuestra comunidad  
      de programadoras </h1>
      <img class='logo' src="./img/logo.jpg">
@@ -15,8 +13,8 @@ let p = `
          <input type="button" value="Ingresar" id="getInTo" class="acess">
       </form>
       <p class='options'> Ingresa con:</p>
-           <img class="logoF" src="/img/F.jpg">
-             <img class="logoG" src="/img/G.jpg">
+           <img class="logoF" src="./img/F.jpg">
+             <img class="logoG" src="./img/G.jpg">
       <p class="not">¿No tienes cuenta?</p>
       <a class="re" id="registro">Registrate</a>
       </div>
@@ -60,7 +58,6 @@ function loginFb(){
     firebase.auth().signInWithPopup(provider).then(function(result) {
         // This gives you a Facebook Access Token. You can use it to access the Facebook API.
         var token = result.credential.accessToken;
-        // The signed-in user info.
         var user = result.user;
         console.log(user);
         // ...
@@ -68,13 +65,10 @@ function loginFb(){
         // Handle Errors here.
         var errorCode = error.code;
         var errorMessage = error.message;
-        // The email of the user's account used.
         var email = error.email;
-        // The firebase.auth.AuthCredential type that was used.
         var credential = error.credential;
-        // ...
-      });
-   }
+      })
+     }
 
    let signInWithEmail = document.querySelector('#getInTo');
    signInWithEmail.addEventListener('click', signIn);
@@ -93,7 +87,7 @@ function loginFb(){
          saveUser(userInfo)
        })
        .catch(function(error) {
-       // Handle Errors here.
+      alert('ocurrio un error, asegurate que tu correo este verificado y/o los campos estén bien completados')
        var errorCode = error.code;
        var errorMessage = error.message;
        console.log(errorCode);
